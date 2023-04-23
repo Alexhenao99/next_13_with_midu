@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 const fetchComments = async (id) => {
   await new Promise((resolve) => setTimeout(resolve, 1000))
 
@@ -19,16 +21,16 @@ const Post = async ({ params }) => {
 
   return (
     <div style={{ border: '1px solid #444', borderRadius: '15px', padding: '10px', marginTop: '15px' }}>
-      <ul>
-        {
-          comments.map(comment => (
-            <li key={comment.id}>
-              <h4>{comment.name}</h4>
-              <small>{comment.body}</small>
-            </li>
-          ))
-        }
-      </ul>
+      {
+        comments.map(comment => (
+          <div key={comment.id} style={{ display: 'flex', flexDirection: 'column', border: `1px solid rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`, borderRadius: '15px', marginTop: '10px', padding: '15px' }}>
+            <Image width='50' height='50' alt={comment.name} src={`https://api.dicebear.com/6.x/big-smile/svg?seed=${comment.email}.svg`} />
+            <h4>{comment.name}</h4>
+            <small>{comment.body}</small>
+          </div>
+
+        ))
+      }
     </div>
   )
 }

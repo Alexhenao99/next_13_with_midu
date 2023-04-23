@@ -2,6 +2,11 @@
 const nextConfig = {
   experimental: {
     appDir: true
+  },
+  images: {
+    domains: ['api.dicebear.com'],
+    loader: 'default',
+    path: ''
   }
 }
 
