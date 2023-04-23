@@ -1,11 +1,11 @@
-import { Navigation } from './components/Navigation'
+import { Navigation } from '../components/Navigation'
 import '../styles/globals.css'
 
 export default function RootLayout ({ children }) {
   return (
     <html lang='es'>
       <head>
-        <title>My first app with Next 13</title>
+        <title> My first app with Next 13 </title>
       </head>
       <body>
         <Navigation />
