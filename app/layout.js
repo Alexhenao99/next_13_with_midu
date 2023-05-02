@@ -1,7 +1,7 @@
 import { Navigation } from '../components/Navigation'
 import '../styles/globals.css'
 
-export default function RootLayout ({ children }) {
+const RootLayout = ({ children }) => {
   return (
     <html lang='es'>
       <head>
@@ -14,3 +14,5 @@ export default function RootLayout ({ children }) {
     </html>
   )
 }
+
+export default RootLayout

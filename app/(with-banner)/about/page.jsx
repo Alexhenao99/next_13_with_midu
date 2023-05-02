@@ -1,5 +1,19 @@
-export default function AboutPage () {
+'use client'
+
+import { useEffect } from 'react'
+import iniciarAnimacion from './animacion'
+
+const AboutPage = () => {
+  useEffect(() => {
+    iniciarAnimacion()
+  }, [])
+
   return (
-    <h1>Este es el about</h1>
+    <div>
+      <h1>Este es el about</h1>
+      <canvas id='miCanvas' width='500' height='500'> </canvas>
+    </div>
   )
 }
+
+export default AboutPage
